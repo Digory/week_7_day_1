@@ -19,7 +19,7 @@ public class ThemeParkTest {
     @Before
     public void before(){
         themePark = new ThemePark();
-        playground = new Playground("Funland", 2);
+        playground = themePark.getPlayground();
         child = new Visitor(10,110,10.0);
         adult = new Visitor(30, 210, 30.0);
     }
@@ -40,6 +40,11 @@ public class ThemeParkTest {
     public void stringOfReviews(){
         String actual = themePark.stringOfReviews();
         assertEquals("Digory's nice park: 5, Digory's bumpy ride: 9, Digory's cool playground: 6, Digory's below average rollercoaster: 3, Sweet pink: 5, white stuff: 6, Tobacco cones: 3", actual);
+    }
+
+    @Test
+    public void printStuff(){
+        themePark.printInstanceThings();
     }
 
 }

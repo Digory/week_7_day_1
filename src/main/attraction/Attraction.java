@@ -17,10 +17,10 @@ public abstract class Attraction implements IReviewed {
 
     public abstract boolean visit(Visitor visitor);
 
+
     @Override
     public String getName() {
-        return name;
-    }
+        return name; }
 
     @Override
     public int getRating(){

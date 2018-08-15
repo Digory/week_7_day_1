@@ -16,6 +16,7 @@ public abstract class Stall implements IReviewed, ITicketed {
         this.rating = rating;
     }
 
+
     @Override
     public int getRating(){
         return rating;

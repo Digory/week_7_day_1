@@ -51,6 +51,10 @@ public class ThemePark {
         stalls.add(tobaccoStall);
     }
 
+    public Playground getPlayground(){
+        return playground;
+    }
+
 
     public boolean visit(Visitor visitor, Attraction attraction){
         return attraction.visit(visitor);
@@ -88,5 +92,19 @@ public class ThemePark {
             }
         }
         return allowedThings;
+    }
+
+    public void printInstanceThings(){
+        for(Attraction attraction : attractions){
+            if(attraction instanceof ISecurity){
+                System.out.println(attraction.getName() + " is an instance of ISecurity");
+            }
+            if(attraction instanceof ITicketed){
+                System.out.println(attraction.getName() + " is an instance of ITicketed");
+            }
+            if(attraction instanceof IReviewed){
+                System.out.println(attraction.getName() + " is an instance of IReviewed");
+            }
+        }
     }
 }

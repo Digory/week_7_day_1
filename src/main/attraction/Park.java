@@ -12,4 +12,5 @@ public class Park extends Attraction{
     public boolean visit(Visitor visitor) {
         return true;
     }
+
 }
